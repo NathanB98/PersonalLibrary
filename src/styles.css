@@ -11,8 +11,24 @@ body {
 
 /* Header styles */
 .header-container {
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    padding: 1rem;
     border-bottom: solid 1px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: solid 1px black;
+    border-radius: 15px;
+}
+.add-button:hover {
+    cursor: pointer;
+}
+.add-button:active {
+    filter: brightness(90%);
 }
 
 /* Main content styles */
