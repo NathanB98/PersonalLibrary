@@ -61,3 +61,26 @@ body {
     padding-top: 0.5rem;
     border-top: solid 1px black;
 }
+
+/* Modal styles */
+.modal-background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-container {
+    /*display: none;*/
+    position: relative;
+    z-index: 1;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+
+}

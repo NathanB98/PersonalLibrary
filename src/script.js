@@ -26,6 +26,9 @@ const myLibrary = [
 ];
 
 const LIBRARY_GRID = document.querySelector('.library-container');
+const ADD_BOOK_BUTTON = document.querySelector('.add-button');
+
+ADD_BOOK_BUTTON.addEventListener('click', openFormModal);
 
 // Book Object constructor //
 function Book(author, title, pages, read) {
@@ -65,6 +68,10 @@ function initialiseBookCard(book) {
 
     bookCard.append(titlePara, authorPara, pagesPara, readPara);
     LIBRARY_GRID.appendChild(bookCard);
+}
+
+function openFormModal() {
+    //handle opening the modal when the add book button is clicked
 }
 
 displayLibrary();
