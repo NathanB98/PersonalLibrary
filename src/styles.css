@@ -1,3 +1,4 @@
+/* General page styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,11 +9,13 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Header styles */
 .header-container {
     padding: 1rem 0.5rem 1rem 0.5rem;
     border-bottom: solid 1px black;
 }
 
+/* Main content styles */
 .library-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -28,6 +31,7 @@ body {
     padding: 1rem 0.5rem 1rem 0.5rem;
 }
 
+/* Footer styles */
 .footer-container {
     display: flex;
     justify-content: center;
