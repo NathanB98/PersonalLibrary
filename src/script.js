@@ -75,8 +75,11 @@ function initialiseBookCard(book) {
     const readPara = document.createElement('p');
     readPara.className = 'book-read';
     readPara.textContent = book.read;
+    const removeBtn = document.createElement('button');
+    removeBtn.className = 'book-remove-btn';
+    removeBtn.textContent = 'Remove Book';
 
-    bookCard.append(titlePara, authorPara, pagesPara, readPara);
+    bookCard.append(titlePara, authorPara, pagesPara, readPara, removeBtn);
     LIBRARY_GRID.appendChild(bookCard);
 }
 
