@@ -62,25 +62,20 @@ body {
     border-top: solid 1px black;
 }
 
-/* Modal styles */
-.modal-background {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.4);
-}
-.modal-container {
-    /*display: none;*/
-    position: relative;
-    z-index: 1;
-    overflow: auto;
+/* Modal form styles */
+.dialog-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 0.5rem;
 }
 
-.modal-content {
-
+.book-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
 }
