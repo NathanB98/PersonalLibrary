@@ -79,6 +79,16 @@ function initialiseBookCard(book) {
     const readStatusBtn = document.createElement('button');
     readStatusBtn.className = 'book-read-toggle';
     readStatusBtn.textContent = 'Change Read Status';
+    readStatusBtn.addEventListener('click', () => {
+        console.log(book);
+        if(book.read === true) {
+            book.read = false
+        } else {
+            book.read = true
+        }
+        clearLibraryDisplay();
+        displayLibrary();
+    });
 
     const removeBtn = document.createElement('button');
     removeBtn.className = 'book-remove-btn';
