@@ -29,16 +29,16 @@
         <div class="dialog-content">
             <h3>Enter Book</h3>
             <form class="book-form">
-                <input type="text" name="" id="" placeholder="Title">
-                <input type="text" name="" id="" placeholder="Author">
-                <input type="number" name="" id="" placeholder="Number of Pages">
+                <input type="text" name="bookTitle" id="title-input" placeholder="Title">
+                <input type="text" name="bookAuthor" id="author-input" placeholder="Author">
+                <input type="number" name="bookPageCount" id="pages-input" placeholder="Number of Pages">
                 <div class="checkbox-container">
-                    <input type="checkbox" name="" id="read-status-check">
                     <label for="read-status-check">I have read this book</label>
+                    <input type="checkbox" name="bookReadStatus" id="read-status-check">
                 </div>
                 <div class="button-container">
-                    <button formmethod="dialog">Cancel</button>
-                    <button class="confirm-btn">Submit</button>
+                    <button formmethod="dialog" class="form-btn">Cancel</button>
+                    <button class="submit-btn form-btn">Submit</button>
                 </div>
             </form>
         </div>

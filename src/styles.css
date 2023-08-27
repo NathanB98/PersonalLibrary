@@ -60,9 +60,21 @@ body {
     text-align: center;
     padding-top: 0.5rem;
     border-top: solid 1px black;
+    background-color: #ffffff;
 }
 
 /* Modal form styles */
+.modal-form {
+    border: solid 1px black;
+    border-radius: 15px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+.modal-form::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 .dialog-content {
     display: flex;
     flex-direction: column;
@@ -78,4 +90,30 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+}
+
+.checkbox-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-btn {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 15px;
+    border: solid 1px black;
+}
+.form-btn:hover {
+    cursor: pointer;
+}
+.form-btn:active {
+    filter: brightness(90%);
 }

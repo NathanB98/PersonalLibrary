@@ -28,9 +28,12 @@ const myLibrary = [
 const LIBRARY_GRID = document.querySelector('.library-container');
 const ADD_BOOK_BUTTON = document.querySelector('.add-button');
 const MODAL_DIALOG = document.querySelector('.modal-form');
-const MODAL_CONFIRM_BUTTON = document.querySelector('.confirm-btn');
-
-//ADD_BOOK_BUTTON.addEventListener('click', openFormModal);
+const BOOK_FORM = document.querySelector('.book-form');
+const MODAL_SUBMIT_BUTTON = document.querySelector('.submit-btn');
+const BOOK_TITLE_INPUT = document.querySelector('#title-input');
+const BOOK_AUTHOR_INPUT = document.querySelector('#author-input');
+const BOOK_PAGES_INPUT = document.querySelector('#pages-input');
+const BOOK_READ_INPUT = document.querySelector('#read-status-check');
 
 // Book Object constructor //
 function Book(author, title, pages, read) {
@@ -45,6 +48,10 @@ function addBookToLibrary(author, title, pages, read) {
     myLibrary.push(userAddedBook);
 }
 
+function clearLibraryDisplay() {
+    LIBRARY_GRID.innerHTML = "";
+}
+
 function displayLibrary() {
     for(let book of myLibrary) {
         initialiseBookCard(book);
@@ -54,6 +61,7 @@ function displayLibrary() {
 function initialiseBookCard(book) {
     const bookCard = document.createElement('div');
     bookCard.className = 'book-card';
+    bookCard.dataset.index = myLibrary.indexOf(book);
 
     const titlePara = document.createElement('p');
     titlePara.className = 'book-title';
@@ -76,8 +84,21 @@ ADD_BOOK_BUTTON.addEventListener('click', () => {
     MODAL_DIALOG.showModal();
 });
 
-MODAL_CONFIRM_BUTTON.addEventListener('click', (event) => {
+MODAL_SUBMIT_BUTTON.addEventListener('click', (event) => {
     event.preventDefault();
+    
+    let titleInput = BOOK_TITLE_INPUT.value;
+    let authorInput = BOOK_AUTHOR_INPUT.value;
+    let pagesInput = BOOK_PAGES_INPUT.value;
+    let readInput = BOOK_READ_INPUT.checked;
+
+    addBookToLibrary(authorInput, titleInput, pagesInput, readInput);
+
+    MODAL_DIALOG.close();
+    BOOK_FORM.reset();
+
+    clearLibraryDisplay();
+    displayLibrary();
 })
 
 displayLibrary();
