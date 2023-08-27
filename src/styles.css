@@ -47,13 +47,16 @@ body {
     padding: 1rem 0.5rem 1rem 0.5rem;
 }
 
-.book-remove-btn {
+.book-remove-btn,
+.book-read-toggle {
     padding: 0.5rem;
 }
-.book-remove-btn:hover {
+.book-remove-btn:hover,
+.book-read-toggle:hover {
     cursor: pointer;
 }
-.book-remove-btn:active {
+.book-remove-btn:active,
+.book-read-toggle:active {
     filter: brightness(90%);
 }
 

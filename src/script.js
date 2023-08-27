@@ -75,11 +75,22 @@ function initialiseBookCard(book) {
     const readPara = document.createElement('p');
     readPara.className = 'book-read';
     readPara.textContent = book.read;
+
+    const readStatusBtn = document.createElement('button');
+    readStatusBtn.className = 'book-read-toggle';
+    readStatusBtn.textContent = 'Change Read Status';
+
     const removeBtn = document.createElement('button');
     removeBtn.className = 'book-remove-btn';
     removeBtn.textContent = 'Remove Book';
+    removeBtn.addEventListener('click', () => {
+        myLibrary.splice(bookCard.dataset.index, 1);
+        bookCard.remove();
+        clearLibraryDisplay();
+        displayLibrary();
+    });
 
-    bookCard.append(titlePara, authorPara, pagesPara, readPara, removeBtn);
+    bookCard.append(titlePara, authorPara, pagesPara, readPara, readStatusBtn, removeBtn);
     LIBRARY_GRID.appendChild(bookCard);
 }
 
@@ -102,6 +113,6 @@ MODAL_SUBMIT_BUTTON.addEventListener('click', (event) => {
 
     clearLibraryDisplay();
     displayLibrary();
-})
+});
 
 displayLibrary();
