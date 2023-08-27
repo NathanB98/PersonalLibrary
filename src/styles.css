@@ -47,6 +47,17 @@ body {
     padding: 1rem 0.5rem 1rem 0.5rem;
 }
 
+.book-remove-btn {
+    padding: 0.5rem;
+}
+.book-remove-btn:hover {
+    cursor: pointer;
+}
+.book-remove-btn:active {
+    filter: brightness(90%);
+}
+
+
 /* Footer styles */
 .footer-container {
     display: flex;
