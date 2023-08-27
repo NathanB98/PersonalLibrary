@@ -1,27 +1,27 @@
 const myLibrary = [
     {
-        "author": "nathan",
-        "title": "the book",
-        "pages": 250,
-        "read": false
-    },
-    {
-        "author": "tolkein",
-        "title": "fellowship",
-        "pages": 460,
+        "author": "J.R.R. Tolkien",
+        "title": "The Fellowship of the Ring",
+        "pages": 423,
         "read": true
     },
     {
-        "author": "bordain",
-        "title": "confidential",
-        "pages": 290,
+        "author": "J.K. Rowling",
+        "title": "Harry Potter and the Half-Blood Prince",
+        "pages": 607,
+        "read": false
+    },
+    {
+        "author": "Anthony Bourdain",
+        "title": "Kitchen Confidential",
+        "pages": 320,
         "read": true
     },
     {
-        "author": "rowling",
-        "title": "potter",
-        "pages": 340,
-        "read": false
+        "author": "Ernst Jünger",
+        "title": "Storm of Steel",
+        "pages": 187,
+        "read": true
     }
 ];
 

@@ -35,6 +35,7 @@ body {
 .library-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2rem;
 }
 
 .book-card {
@@ -44,12 +45,15 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    padding: 1rem 0.5rem;
+    margin: 0.5rem;
+    text-align: center;
 }
 
 .book-remove-btn,
 .book-read-toggle {
     padding: 0.5rem;
+    width: 100%;
 }
 .book-remove-btn:hover,
 .book-read-toggle:hover {
